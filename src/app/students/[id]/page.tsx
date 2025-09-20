@@ -3,17 +3,16 @@
 
 import StudentDetail from "@/app/components/StudentDetail";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
+export default function StudentDetailPage() {
+  const router = useRouter();
+  const { id } = router.query;
 
-type Props = {
-  params: {
-    id: string;
-  };
-};
-
-
-export default function StudentDetailPage({ params }: Props) {
-  const { id } = params;
+  // รอจนกว่าจะได้ id ก่อน
+  if (!id) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -35,7 +34,7 @@ export default function StudentDetailPage({ params }: Props) {
         </div>
       </header>
       <main className="max-w-6xl mx-auto p-6">
-        <StudentDetail id={id} />
+        <StudentDetail id={id as string} />
       </main>
     </div>
   );

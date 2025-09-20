@@ -1,14 +1,16 @@
+"use client";
+
 import StudentDetail from "@/app/components/StudentDetail";
 import Link from "next/link";
 
-// type สำหรับ params ของ route
+
 type Props = {
   params: {
     id: string;
   };
 };
 
-// ตัว page เป็น Server Component
+
 export default function StudentDetailPage({ params }: Props) {
   const { id } = params;
 

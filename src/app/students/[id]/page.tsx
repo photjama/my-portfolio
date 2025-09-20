@@ -1,11 +1,14 @@
 import StudentDetail from "@/app/components/StudentDetail";
 import Link from "next/link";
 
-interface Params {
-  params: { id: string };
-}
+// type สำหรับ params ของ route
+type Props = {
+  params: {
+    id: string;
+  };
+};
 
-export default function StudentDetailPage({ params }: Params) {
+export default function StudentDetailPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <header className="bg-white/80 backdrop-blur-md shadow-lg border-b border-gray-200">

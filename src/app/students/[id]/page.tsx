@@ -8,7 +8,10 @@ type Props = {
   };
 };
 
+// ตัว page เป็น Server Component
 export default function StudentDetailPage({ params }: Props) {
+  const { id } = params;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <header className="bg-white/80 backdrop-blur-md shadow-lg border-b border-gray-200">
@@ -29,7 +32,7 @@ export default function StudentDetailPage({ params }: Props) {
         </div>
       </header>
       <main className="max-w-6xl mx-auto p-6">
-        <StudentDetail id={params.id} />
+        <StudentDetail id={id} />
       </main>
     </div>
   );

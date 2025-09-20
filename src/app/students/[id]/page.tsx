@@ -1,3 +1,4 @@
+
 "use client";
 
 import StudentDetail from "@/app/components/StudentDetail";

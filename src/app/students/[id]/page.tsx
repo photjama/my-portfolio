@@ -1,7 +1,11 @@
 import StudentDetail from "@/app/components/StudentDetail";
 import Link from "next/link";
 
-export default function StudentDetailPage({ params }: { params: { id: string } }) {
+interface Params {
+  params: { id: string };
+}
+
+export default function StudentDetailPage({ params }: Params) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <header className="bg-white/80 backdrop-blur-md shadow-lg border-b border-gray-200">
